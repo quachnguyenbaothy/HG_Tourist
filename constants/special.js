@@ -1,0 +1,58 @@
+const specials = [
+  {
+    id: "1",
+    name: "Cá thát lát Hậu Giang",
+    location: "Hậu Giang",
+    image: require("../assets/images/cathatlat.png"),
+    audio: require("../assets/audio/dsthatlat.mp3"),
+    url:"https://www.youtube.com/watch?v=-jkj3vslNWM",
+    details: `Nhiều người nói rằng: "Đi du lịch Hậu Giang mà không ăn được cá Thát Lát thì coi như thiếu sót lớn". Cá thát lát có tên khoa học: Notopterus Pallas( Cá thường) và Notopterus Chitala(cá còm). Ở hầu hết các nhà hàng, tiệm ăn lớn ở Hậu Giang đều có các món ăn được chế biến từ cá Thát lát. Người dân Hậu Giang lâu nay coi đây là món đặc sản rất đáng tự hào của tỉnh nhà. Năm 2008 các Thát Lát Hậu Giang được Cục sở hữu trí tuệ cấp giấy chứng nhận thương hiệu độc quyền. Cá Thát Lát Hậu Giang còn rất được các bà nội trợ "tín nhiệm" khi được chế biến thành nhiều món ăn như: Cá Thát Lát tẩm gia vị, chả cá Thát Lát,..và gần đây tổ chức Kỷ lục Việt Nam đã công bố Cá Thát Lát bảy món Hậu Giang lọt vào top 50 món ăn đặc sản nổi tiếng Việt Nam. Hiện nay, cá Thát Lát Hậu Giang là sản phẩm có mặt trong hệ thống siêu thị bán lẻ của Co.op mart và là món quà mang về không thể thiếu khi du khách có dịp đến Hậu Giang.`,
+  },
+  {
+    id: "2",
+    name: "Bưởi Năm Roi Phú Hữu",
+    location: "Xã Phú Hữu, huyện Châu Thành",
+    image: require("../assets/images/buoinamroi.jpg"),
+    audio: require("../assets/audio/dsbuoi.mp3"),
+    url:"https://www.youtube.com/watch?v=IWG36F_Hr14",
+    details: `Bưởi Năm Roi Phú Hữu được trồng nhiều ở xã Phú Hữu, Hậu Giang huyện Châu Thành, tỉnh Hậu Giang, rất khác với bưởi Năm Roi dây được trồng nhiều ở Phong Hòa, Bình Minh, Vĩnh Long. Bưởi Năm Roi Phú Hữu trái lớn, vỏ vàng, đệp, khi chín rất đầy đặn, không hạt, màu vàng mở gà, tép bưởi khô, vị ngọt thoảng chua thanh. Ngoài ra rượu bưởi Phú Hữu cũng rất được ưa chuộng. Trong những năm gần đây, nông dân xã Phú Hữu đã lai tạo ra bưởi Hồ Lô(có hình dạng giống bình hồ lô) được trưng bày trên bàn thờ tổ tiên trong những dịp lễ, Tết, rất được thị trường ưa chuộng, mang lại nguồn thu nhập đáng kể cho người trồng bưởi.`,
+  },
+  {
+    id: "3",
+    name: "Khóm Cầu Đúc",
+    location: "Xã Hỏa Tiến TP. Vị Thanh",
+    image: require("../assets/images/khomcauducHG.png"),
+    audio: require("../assets/audio/dskhom.mp3"),
+    url:"https://www.youtube.com/watch?v=_SY0ZpNSMBs",
+    details: `Trải qua hơn 100 năm, Khóm Cầu Đúc, loại cây trồng chủ lực của người dân xã Hỏa Tiến, thành phố Vị Thanh, tỉnh Hậu Giang, hiện đã trở thành một loại đặc sản và có mặt trên thị trường cả nước bởi hương vị ngọt thanh rất đặc trưng không giống bất kỳ loại khóm nào. Khóm Cầu Đúc có tên khoa học là Ananas comocus thuộc giống Queen-Hoàng Hậu, có nguồn gốc từ Châu Á, được trồng nhiều nơi trên địa bàn tỉnh Hậu Giang nhưng đặc biệt thích nghi với vùng đất này. Khi vùng quê này có cây cầu đúc xi măng đầu tiền, bà con phấn khởi gọi vùng đất của mình là xóm Cầu Đúc và cây khóm cũng nhanh chóng được đặt tên là Khóm Cầu Đúc cho tới ngày nay. Năm 2006. Hậu Giang đã chọn khóm Cầu Đúc để xây dựng thương hiệu đặc sản cho tỉnh. Đồng thời cũng đầu tư nhiều cho việc cải tạo giống, nâng cao chất lượng. Vì vậy trái khóm ngày càng to, sơ thưa, cùi nhỏ. Vào những dịp lễ, Tết. Người dân nơi đây thường sử dụng khóm để chế biến thành các món ăn hấp dẫn như: gà hấp khóm, lagu khóm, mứt khóm, kẹo khóm.`,
+  },
+  {
+    id: "4",
+    name: "Quýt đường Long Trị",
+    location: "Xã Long Trị, thị xã Long Mỹ",
+    image: require("../assets/images/quytduong.jpg"),
+    audio: require("../assets/audio/dsquyt.mp3"),
+    url:"https://www.youtube.com/watch?v=2avvHMrT36Y",
+    details: `Cũng giống như nhiều loại cây đặc sản khác, quýt đường là loại trái cây vốn nổi tiếng từ lâu của vùng đất Long Trị. Với ưu điểm trái to, vỏ mỏng, mọng nước, vị ngọt thanh, thơm và để được lâu là một loại trái cây đặc sản của Hậu Giang được nhiều người ưa chuộng. Cây quýt đường được đưa về xã Long Trị, huyện Long Mỹ trồng từ năm 1947, theo thời gian cây quýt đường được nhân rộng ra thành những vườn cây trái bạt ngàn, trĩu quả bởi nơi đây nằm ven sông Cái Lớn được phù sa bồi đắp rất thuận lợi cho sự phát triển cây quýt đường. Hàng năm cung ứng cho thị trường trên 500 tấn quýt đường, đạt giá trị hơn 10 tỷ đồng.`,
+  },
+  {
+    id: "5",
+    name: "Đọt chọi Hậu Giang",
+    location: "Phường 1 TP. Vị Thanh",
+    image: require("../assets/images/dotchoi.jpg"),
+    audio: require("../assets/audio/dsdotchoi.mp3"),
+    url:"https://www.youtube.com/watch?v=LDHlgR4tEq0",
+    details: `Loại cây này sống nhiều ở vùng đất bưng trũng, là loại dây leo, thân bò tới đâu thì bám rễ tới đó, nhờ bộ rễ có sức hút nước mạnh, đặc biệt rất thích nghi với những vùng đất nhiễm phèn nhẹ. Đọt chọi người dân thường gọi là "đọt chại". Món đọt choại đơn giản nhất là ăn sống, trộn nước mắm giấm tỏi ớt, hoặc luộc chấm nước tương, nước cá, nước thịt kho hay mắm nêm đều ngon. "Cao cấp" hơn một chút, đọt choại thường được nhúng vào lẫu mắm, lẫu chua hay xào với dầu. Ngày nay đọt choại đã trở thành món ăn phổ biến của người dân Hậu Giang tạo nên hương vị đậm đà góp phần làm phong phú thêm cho đặc sản Hậu Giang mỗi khi có khách phương xa đến vì đây là loại rau dân dã và là loại rau "sạch".`,
+  },
+  {
+    id: "6",
+    name: "Cháo Lòng Cái TắC",
+    location: "Thị trấn Cái Tắc, huyện Châu Thành",
+    image: require("../assets/images/chaolong.jpg"),
+    audio: require("../assets/audio/dschao.mp3"),
+    url:"https://www.youtube.com/watch?v=4zo5eQc0Anw",
+    details: `Hơn mấy chục năm nay, cháo lòng Cái Tắc đã vang danh không chỉ trong tỉnh mà còn nổi tiếng cả vùng đồng bằng sông Cửu Long. Cũng như những nơi khác, cháo lòng Cái Tắc đã được chế biến từ những nguyên liệu quen thuộc là gạo, tim, gan, phèo, phổi,  heo,..Qua bàn tay chế biến khéo léo của người dân nơi đây đã tạo thành món cháo lòng với hương bị đặc biệt thơm ngon mà không nơi nào có được. Những quán ăn này nằm cạnh QL61, ngay ngã ba Cái Tắc, xã Tân Phú Thạnh huyện Châu Thành A, tỉnh Hậu Giang. Tháng 10 năm 2012 tổ chức kỹ lục Việt Nam công bố Cháo lòng Cái Tắc Hậu Giang lọt top 5 đặc sản nổi tiếng Việt Nam.`,
+  },
+];
+
+export default specials;

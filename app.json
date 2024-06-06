@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "HG_Tourist",
+    "slug": "HG_Tourist",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.maitronghuu.HG_Tourist",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCwe00KgG0fydEYsvh8JqrreMmyEWh7qpo"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f8e8ed4e-453f-4642-96ed-3b7b3850d990"
+      }
+    }
+  }
+}
