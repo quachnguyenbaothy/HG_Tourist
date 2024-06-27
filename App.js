@@ -3,61 +3,57 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { extendTheme, NativeBaseProvider } from "native-base";
 import React from "react";
-import HomeScreen from "./screens/HomeScreen";
 import HistoryScreen from "./screens/HistoryScreen";
-import GuideBookScreen from "./screens/GuideBookScreen";
 import LandScreen from "./screens/LandScreen";
 import CultureScreen from "./screens/CultureScreen";
 import JobScreen from "./screens/JobScreen";
 import SpecialiteScreen from "./screens/SpecialiteScreen";
 import MapsScreen from "./screens/MapsScreen";
-
-
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import DrawerNavigator from "./DrawerNavigator";
+import GuideBookScreen from "./screens/GuideBookScreen";
 
 const config = {
   useSystemColorMode: false,
   initialColorMode: "light",
 };
 const Stack = createNativeStackNavigator();
-
-
+const Drawer = createDrawerNavigator();
 // extend the theme
 export const theme = extendTheme({ config });
 export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-          initialRouteName="Home"
-        >
-          <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            options={{
-              headerShown: false,
-            }}
+        <Stack.Navigator>
+          <Drawer.Screen
+            name="HAU GIANG TOURIST"
+            component={DrawerNavigator}
+           
           />
-          <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
-          <Stack.Screen name="LandScreen" component={LandScreen} />
-          <Stack.Screen name="CultureScreen" component={CultureScreen} />
-          <Stack.Screen name="JobScreen" component={JobScreen} />
-          <Stack.Screen name="SpecialiteScreen" component={SpecialiteScreen} />
-          <Stack.Screen name="GuideBookScreen" component={GuideBookScreen} />
-          <Stack.Screen name="MapsScreen" component={MapsScreen} />
+
+          <Stack.Screen name="GuideBookScreen" component={GuideBookScreen} options={{title: 'Cẩm nang Du lịch Hậu Giang'}}/>
+          <Stack.Screen name="MapsScreen" component={MapsScreen} options={{title: 'Bản đồ du lịch'}}/>
+          <Stack.Screen name="HistoryScreen" component={HistoryScreen} options={{title: 'Di tích lịch sử'}} />
+          <Stack.Screen name="LandScreen" component={LandScreen} options={{title: 'Danh lam thắng cảnh'}}/>
+          <Stack.Screen name="CultureScreen" component={CultureScreen} options={{title: 'Văn hóa lễ hội'}} />
+          <Stack.Screen name="JobScreen" component={JobScreen} options={{title: 'Làng nghề truyền thống'}}/>
+          <Stack.Screen name="SpecialiteScreen" component={SpecialiteScreen} options={{title: 'Đặc sản Hậu Giang'}}/>
+
+          <Drawer.Screen
+            name="GioiThieuScreen"
+            component={DrawerNavigator}
+            options={{ header: () => <Header /> }}
+          />
+          <Drawer.Screen
+            name="PlaneScreen"
+            component={DrawerNavigator}
+            options={{ header: () => <Header /> }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({});
