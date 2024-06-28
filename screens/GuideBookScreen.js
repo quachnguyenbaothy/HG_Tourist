@@ -4,25 +4,23 @@ import {
   StyleSheet,
   Text,
   FlatList,
-  TextInput,
-   View,
+  View,
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
 import COLORS from "../constants/colors";
-import Icon from "react-native-vector-icons/MaterialIcons";
 import { ScrollView } from "react-native";
 import places from "../constants/place";
 import lands from "../constants/land";
 import cultures from "../constants/culture";
 import jobs from "../constants/job";
 import specials from "../constants/special";
+import intros from "../constants/intro";
 import {
   Ionicons,
   MaterialIcons,
   MaterialCommunityIcons,
-  AntDesign,
   FontAwesome5,
 } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
@@ -53,7 +51,7 @@ const GuideBookScreen = ({ navigation }) => {
         )
       }
     />,
-    // onPress={() => navigation.navigate("ChatBotScreen")}
+  
 
     <FontAwesome5
       name="hotel"
@@ -83,6 +81,34 @@ const GuideBookScreen = ({ navigation }) => {
   };
 
   {
+    /* Giới thiệu*/
+  }
+
+  const Gioi_thieu = ({ intro }) => {
+    return (
+      <View>
+        <ImageBackground style={styles.cardImage} source={intro.image}>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "space-between",
+              flexDirection: "row",
+              alignItems: "flex-end",
+            }}
+          ></View>
+        </ImageBackground>
+        <View>
+          <Text
+            style={{ color: COLORS.white, fontWeight: "bold", margin: "auto" }}
+          >
+            {intro.name}
+          </Text>
+        </View>
+      </View>
+    );
+  };
+
+  {
     /* Di tich lịch su*/
   }
 
@@ -103,7 +129,7 @@ const GuideBookScreen = ({ navigation }) => {
           ></View>
         </ImageBackground>
         <View>
-          <Text style={{ color: COLORS.dark }}>{place.name}</Text>
+          <Text style={{ color: COLORS.dark,fontWeight:"bold" }}>{place.name}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -130,7 +156,7 @@ const GuideBookScreen = ({ navigation }) => {
           ></View>
         </ImageBackground>
         <View>
-          <Text style={{ color: COLORS.dark, justifyContent: "center" }}>
+          <Text style={{ color: COLORS.dark, fontWeight:"bold" }}>
             {land.name}
           </Text>
         </View>
@@ -159,7 +185,7 @@ const GuideBookScreen = ({ navigation }) => {
           ></View>
         </ImageBackground>
         <View>
-          <Text style={{ color: COLORS.dark }}>{culture.name}</Text>
+          <Text style={{ color: COLORS.dark,fontWeight:"bold" }}>{culture.name}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -186,7 +212,7 @@ const GuideBookScreen = ({ navigation }) => {
           ></View>
         </ImageBackground>
         <View>
-          <Text style={{ color: COLORS.dark }}>{job.name}</Text>
+          <Text style={{ color: COLORS.dark,fontWeight:"bold" }}>{job.name}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -213,7 +239,7 @@ const GuideBookScreen = ({ navigation }) => {
           ></View>
         </ImageBackground>
         <View>
-          <Text style={{ color: COLORS.dark }}>{special.name}</Text>
+          <Text style={{ color: COLORS.dark,fontWeight:"bold" }}>{special.name}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -225,32 +251,17 @@ const GuideBookScreen = ({ navigation }) => {
         translucent={false}
         backgroundColor={COLORS.primary}
       ></StatusBar>
-      <View style={styles.header}>
-        <Icon name="sort" size={28} color={COLORS.white}></Icon>
-
-        <Icon name="notifications-none" size={28} color={COLORS.white}></Icon>
-      </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View
-          style={{
-            backgroundColor: COLORS.primary,
-            height: 120,
-            paddingHorizontal: 20,
-          }}
-        >
-          <View>
-            <Text style={styles.headerTitle}>CẨM NANG DU LỊCH HẬU GIANG</Text>
-          </View>
+        <View style={styles.header}>
+          <FlatList
+            contentContainerStyle={{ paddingLeft: 20 }}
+            data={intros}
+            horizontal
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item }) => <Gioi_thieu intro={item} />}
+          ></FlatList>
         </View>
-
-        {/* <View style={styles.inputContainer}>
-          <Icon name="search" size={28} />
-          <TextInput
-            placeholder="Search place"
-            style={{ color: COLORS.grey }}
-          />
-        </View> */}
 
         <ListCategories></ListCategories>
 
@@ -364,7 +375,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     marginRight: 20,
-    padding: 10,
+    padding: 20,
     overflow: "hidden",
     borderRadius: 10,
   },
