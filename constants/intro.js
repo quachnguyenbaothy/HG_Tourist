@@ -86,14 +86,38 @@ const intros = [
       },
       {
         id: "15",
-        name: "Rau chọi luộc",
+        name: "Chả cá thát lát",
         image: require("../assets/images/15.jpg"),
        
       },
       {
         id: "16",
-        name: "Rau chọi",
+        name: "Chả cá thát lát",
         image: require("../assets/images/16.jpg"),
+       
+      },
+      {
+        id: "17",
+        name: "Bưởi hồ lô",
+        image: require("../assets/images/17.jpg"),
+       
+      },
+      {
+        id: "18",
+        name: "Bưởi hồ lô",
+        image: require("../assets/images/18.jpg"),
+       
+      },
+      {
+        id: "19",
+        name: "Rau đọt choại luộc",
+        image: require("../assets/images/19.jpg"),
+       
+      },
+      {
+        id: "20",
+        name: "Rau đọt choại",
+        image: require("../assets/images/20.jpg"),
        
       },
   ];
