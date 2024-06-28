@@ -3,13 +3,14 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View,
+  View,SafeAreaView
 } from "react-native";
 import React from "react";
 import COLORS from "../constants/colors";
 
 const GioiThieuScreen = () => {
   return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
     <View>
       <ScrollView>
         <ImageBackground
@@ -28,7 +29,7 @@ const GioiThieuScreen = () => {
         </Text>
         <Text style={styles.text}>
           {"  "}
-          Để du khách có cách nhìn tổng thể, am hiều hơn khi đến với "Đất và
+          Để du khách có cách nhìn tổng thể, am hiểu hơn khi đến với "Đất và
           người Hậu Giang" là mục đích của App ứng dụng muốn đem lại{" "}
         </Text>
 
@@ -47,6 +48,7 @@ const GioiThieuScreen = () => {
         </Text>
       </ScrollView>
     </View>
+    </SafeAreaView>
   );
 };
 
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     textAlign: "justify",
-    color: "blue",
+    color: "black",
     margin: 15,
   },
   image: {
@@ -68,4 +70,3 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-
