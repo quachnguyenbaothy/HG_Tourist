@@ -10,7 +10,7 @@ const lands = [
   },
   {
     id: "2",
-    name: "Khu bảo tồn thiên nhiên Lung Ngọc Hoàng",
+    name: "Lung Ngọc Hoàng",
     location: "Xã Phương Bình, huyện Phụng Hiệp",
     image: require("../assets/images/lungngochoang.jpg"),
     audio: require("../assets/audio/dlngochoang.mp3"),
@@ -29,7 +29,7 @@ const lands = [
 
   {
     id: "4",
-    name: "Trung tâm du lịch sinh thái Phú Hữu",
+    name: "Du lịch sinh thái Phú Hữu",
     location: "Xã Phú Hữu, huyện Châu Thành",
     image: require("../assets/images/sinhthaiphuhuu.jpg"),
     audio: require("../assets/audio/dlphuhuu.mp3"),
@@ -38,7 +38,7 @@ const lands = [
   },
   {
     id: "5",
-    name: "Khu du lịch sinh thái Việt-Úc",
+    name: "Du lịch sinh thái Việt-Úc",
     location: "Xã Vĩnh Tường, huyện Vị Thủy",
     image: require("../assets/images/sinhthaivietuc.jpg"),
     audio: require("../assets/audio/dlvietuc.mp3"),
