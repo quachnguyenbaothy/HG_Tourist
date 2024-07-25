@@ -12,6 +12,13 @@ import MapsScreen from "./screens/MapsScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import DrawerNavigator from "./DrawerNavigator";
 import GuideBookScreen from "./screens/GuideBookScreen";
+import LoginScreen from "./screens/LoginScreen";
+import DashboardScreen from "./screens/DashboardScreen";
+import ItemsScreen from "./tabs/ItemsScreen";
+import AddScreen from "./tabs/AddScreen";
+import EditScreen from "./tabs/EditScreen";
+import OcopScreen from "./screens/OcopScreen";
+
 
 const config = {
   useSystemColorMode: false,
@@ -39,6 +46,14 @@ export default function App() {
           <Stack.Screen name="CultureScreen" component={CultureScreen} options={{title: 'Văn hóa lễ hội'}} />
           <Stack.Screen name="JobScreen" component={JobScreen} options={{title: 'Làng nghề truyền thống'}}/>
           <Stack.Screen name="SpecialiteScreen" component={SpecialiteScreen} options={{title: 'Đặc sản Hậu Giang'}}/>
+          
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="DashboardScreen" component={DashboardScreen} options={{title: 'Admin Panel'}}/>
+          <Stack.Screen name="ItemsScreen" component={ItemsScreen} options={{title: 'Sản phẩm OCOP đạt 4 sao '}}/>
+          <Stack.Screen name="AddScreen" component={AddScreen} options={{title: 'Thêm sản phẩm OCOP '}}/>
+          <Stack.Screen name="EditScreen" component={EditScreen} options={{title: 'Cập nhật sản phẩm OCOP '}}  />
+          <Stack.Screen name="OcopScreen" component={OcopScreen} options={{title: 'Sản phẩm OCOP đạt 4 sao '}}  />
+          
 
           <Drawer.Screen
             name="GioiThieuScreen"
